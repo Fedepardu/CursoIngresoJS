@@ -24,53 +24,47 @@ function CalcularPrecio ()
  	precio = parseInt(precio);
  	cantidad = parseInt(cantidad);
  	precioFinal = parseInt(precioFinal);
+ 	precioDescuento = parseInt(precioDescuento);
 
 
- 	if (cantidad >5)
- 	{
- 		precioDescuento = precioFinal * 0.50
- 	} else
- 	{
- 		if (cantidad == 5) 
- 			{
- 				if (Marca == "ArgentinaLuz") 
- 				{
- 					precioDescuento = precioFinal * 0.60;
- 				} else
- 				{
- 					if (Marca != "ArgentinaLuz") 
- 						{
- 							precioDescuento = precioFinal * 0.70;
- 							
- 						} else
- 						{
- 							if (cantidad == 4)
- 							 {
- 							 	 	precioDescuento = precioFinal * 0.75;
-
- 							 	 } else 
- 							 	 {
- 							 	 	if (Marca == "“FelipeLamparas”") 
- 							 	 		{
- 							 	 			precioDescuento = precioFinal * 0.75;
-
- 							 	 		} else
- 							 	 			{
- 							 	 				precioDescuento = precioFinal * 0.80;
- 							 	 			}
- 							 	 }
-
- 							 };
- 						}
- 				}
- 			}
- 	
-
+ 	if (cantidad > 5) 
+ 		{
+ 			if (Marca = "ArgentinaLuz")
+ 			 {
+ 			 	precioDescuento = precioFinal * 0.50
+ 			 };
+ 		};	
  		
- 		
- 		 	
+ 	if (cantidad == 5)
+ 	{
+ 	 	if (Marca == "ArgentinaLuz") 
+ 	 	{
+ 	 		precioDescuento = precioFinal * 0.60
+ 	 	} 
+ 	 		if (Marca != "ArgentinaLuz")
+ 	 		 {
+ 	 		 	precioDescuento = precioFinal * 0.70
+ 	 		 };
+ 	}
 
- 	
+ 	if (cantidad == 4 && Marca == "ArgentinaLuz")
+ 	{
+ 		 	precioDescuento = precioFinal * 0.75
+ 		 }
+			if(Marca== "“FelipeLamparas”") 
+			{
+				precioDescuento = precioFinal * 0.75
+			} else
+			{
+				precioDescuento = precioFinal * 0.80
+			}
+	
+
+
+
+
+
+
 
  		document.getElementById('precioDescuento').value = precioDescuento;
 
