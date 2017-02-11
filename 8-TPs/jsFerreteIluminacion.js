@@ -15,11 +15,12 @@ function CalcularPrecio ()
  	var precio;
  	var precioFinal;
  	var precioDescuento;
- 	var marca;
+ 	var Marca;
 
  	cantidad = document.getElementById('Cantidad').value;
+ 	Marca = document.getElementById('Marca').value;
  	precio = 35;
- 	precioFinal = cantidad * 35
+ 	precioFinal = cantidad * precio;
  	precio = parseInt(precio);
  	cantidad = parseInt(cantidad);
  	precioFinal = parseInt(precioFinal);
@@ -28,20 +29,70 @@ function CalcularPrecio ()
  	if (cantidad >5)
  	{
  		precioDescuento = precioFinal * 0.50
-
- 	} else 
+ 	} else
  	{
  		if (cantidad == 5) 
- 		{
- 			if (marca == "ArgentinaLuz") 
+ 			{
+ 				if (Marca == "ArgentinaLuz") 
  				{
- 					precioDescuento = precioFinal * 0.60
- 				} else 
+ 					precioDescuento = precioFinal * 0.60;
+ 				} else
  				{
- 					precioDescuento = precioFinal * 0.70
- 				}
- 		};	
- 	}
+ 					if (Marca != "ArgentinaLuz") 
+ 						{
+ 							precioDescuento = precioFinal * 0.70;
+ 							
+ 						} else
+ 						{
+ 							if (cantidad == 4)
+ 							 {
+ 							 	 	precioDescuento = precioFinal * 0.75;
 
- 	document.getElementById('precioDescuento').value = precioDescuento;
+ 							 	 } else 
+ 							 	 {
+ 							 	 	if (Marca == "“FelipeLamparas”") 
+ 							 	 		{
+ 							 	 			precioDescuento = precioFinal * 0.75;
+
+ 							 	 		} else
+ 							 	 			{
+ 							 	 				precioDescuento = precioFinal * 0.80;
+ 							 	 			}
+ 							 	 }
+
+ 							 };
+ 						}
+ 				}
+ 			}
+ 	
+
+ 		
+ 		
+ 		 	
+
+ 	
+
+ 		document.getElementById('precioDescuento').value = precioDescuento;
+
 }
+	
+
+		/*if (cantidad == 4) 
+	
+		if (Marca == "ArgentinaLuz") 
+		{	
+			precioDescuento = precioFinal * 0.75;
+		}
+			if (Marca = "“FelipeLamparas”") 
+				{
+					precioDescuento = precioFinal * 0.75;
+
+				} else
+					{
+						precioDescuento = precioFinal * 0.80;
+					}
+
+					HASTA ACA LLEGUE SIN PODER RESOLVERLO.
+					*/
+
+
