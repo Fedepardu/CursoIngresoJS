@@ -16,50 +16,83 @@ function CalcularPrecio ()
  	var precioFinal;
  	var precioDescuento;
  	var Marca;
+ 	var iibb;
+ 	
 
  	cantidad = document.getElementById('Cantidad').value;
  	Marca = document.getElementById('Marca').value;
  	precio = 35;
+
  	precioFinal = cantidad * precio;
  	precio = parseInt(precio);
  	cantidad = parseInt(cantidad);
  	precioFinal = parseInt(precioFinal);
  	precioDescuento = parseInt(precioDescuento);
+ 	
+ 	
 
 
- 	if (cantidad > 5) 
+ 	if (cantidad == 3 && Marca == "ArgentinaLuz") 
  		{
- 			if (Marca = "ArgentinaLuz")
- 			 {
- 			 	precioDescuento = precioFinal * 0.50
- 			 };
- 		};	
+ 			precioDescuento = precioFinal * 0.85
+ 		} else 
+ 				if (Marca == "FelipeLamparas") 
+ 				{
+ 					precioDescuento = precioFinal * 0.90
+ 				} else 
+ 					{
+ 						precioDescuento = precioFinal * 0.95
+ 					}
+
  		
  	if (cantidad == 5)
  	{
  	 	if (Marca == "ArgentinaLuz") 
  	 	{
  	 		precioDescuento = precioFinal * 0.60
- 	 	} 
- 	 		if (Marca != "ArgentinaLuz")
- 	 		 {
- 	 		 	precioDescuento = precioFinal * 0.70
- 	 		 };
+ 	 	} else 
+ 	 		{
+ 	 			precioDescuento = precioFinal * 0.70
+ 	 		}
+ 	 		
  	}
 
- 	if (cantidad == 4 && Marca == "ArgentinaLuz")
- 	{
- 		 	precioDescuento = precioFinal * 0.75
- 		 }
-			if(Marca== "“FelipeLamparas”") 
-			{
-				precioDescuento = precioFinal * 0.75
-			} else
-			{
-				precioDescuento = precioFinal * 0.80
-			}
-	
+ 	if (cantidad == 4) 
+ 		{
+ 			if (Marca == "ArgentinaLuz" || Marca== "FelipeLamparas") 
+ 				{
+ 					precioDescuento = precioFinal * 0.75;
+ 				} else 
+ 					{
+ 						precioDescuento = precioFinal * 0.80;
+ 					}
+ 		}
 
+
+ 	if (cantidad > 5) 
+ 		{
+ 			if (Marca == "ArgentinaLuz")
+ 			 {
+ 			 	precioDescuento = precioFinal * 0.50
+ 			 } else
+ 			 {
+ 			 	precioDescuento = precioFinal
+ 			 }
+ 		};	
+				
+ 						
+ 	if (precioDescuento > 120)
+ 		 {
+ 		 	iibb = precioDescuento * 0.10
+ 		 	precioDescuento = precioDescuento + iibb
+ 			alert("Usted pagó " + iibb + " de ingresos brutos");
+ 		 }
+
+ 
+
+
+
+ 			
 
 
 
