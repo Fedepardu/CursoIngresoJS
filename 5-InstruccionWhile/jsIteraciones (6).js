@@ -3,7 +3,23 @@ function Mostrar()
 
 	var contador=0;
 	var acumulador=0;
+	var promedio;
+	var numero;
+	
 
+	while(contador <5)
+	{
+		contador++;
+		numero = prompt("Ingrese numero");
+		numero = parseInt(numero);
+		acumulador = acumulador + numero
+
+		
+
+
+	}
+
+	promedio = acumulador / 5
 
 
 document.getElementById('suma').value=acumulador;
