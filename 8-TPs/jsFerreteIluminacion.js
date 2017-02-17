@@ -30,21 +30,14 @@ function CalcularPrecio ()
  	precioDescuento = parseInt(precioDescuento);
  	
  	
-
-
- 	if (cantidad == 3 && Marca == "ArgentinaLuz") 
+ 	if (cantidad > 5) 
  		{
- 			precioDescuento = precioFinal * 0.85
- 		} else 
- 				if (Marca == "FelipeLamparas") 
- 				{
- 					precioDescuento = precioFinal * 0.90
- 				} else 
- 					{
- 						precioDescuento = precioFinal * 0.95
- 					}
+ 			 precioDescuento = precioFinal * 0.50
+ 		} else
+ 			 {
+ 			 	precioDescuento = precioFinal
+ 			 }
 
- 		
  	if (cantidad == 5)
  	{
  	 	if (Marca == "ArgentinaLuz") 
@@ -57,6 +50,7 @@ function CalcularPrecio ()
  	 		
  	}
 
+
  	if (cantidad == 4) 
  		{
  			if (Marca == "ArgentinaLuz" || Marca== "FelipeLamparas") 
@@ -68,17 +62,31 @@ function CalcularPrecio ()
  					}
  		}
 
-
- 	if (cantidad > 5) 
+ 	if (cantidad == 3)
+ 	{
+ 		if (Marca == "ArgentinaLuz")
  		{
- 			if (Marca == "ArgentinaLuz")
- 			 {
- 			 	precioDescuento = precioFinal * 0.50
- 			 } else
- 			 {
- 			 	precioDescuento = precioFinal
- 			 }
- 		};	
+ 			precioDescuento = precioFinal * 0.85;
+ 		} else
+ 			{
+ 				if (Marca == "FelipeLamparas") 
+ 				{
+ 					precioDescuento = precioFinal * 0.90;
+ 				} else
+ 					{
+ 						precioDescuento = precioFinal * 0.95;
+ 					}
+ 			}
+
+ 	}
+ 		
+ 	
+
+ 	
+
+
+ 	
+ 			
 				
  						
  	if (precioDescuento > 120)
